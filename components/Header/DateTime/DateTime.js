@@ -1,8 +1,8 @@
 import React from 'react';
-import CurrentDate from './CurrentDate/CurrentDate';
-import CurrentTime from './CurrentTime/CurrentTime';
 import moment from 'moment/moment';
-
+import dynamic from 'next/dynamic';
+const CurrentDate = dynamic(() => import('./CurrentDate/CurrentDate'), {ssr: false})
+const CurrentTime = dynamic(() => import('./CurrentTime/CurrentTime'), {ssr: false})
 const DateTime = () => {
     const dateTime = moment();
     return (

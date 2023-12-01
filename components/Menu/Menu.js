@@ -1,8 +1,10 @@
 import React from 'react';
-import MenuItem from './MenuItem/MenuItem';
 import './style_menu.module.css';
 import getId from '../../helpers';
 import { connect } from 'react-redux';
+import dynamic from 'next/dynamic';
+
+const MenuItem = dynamic(() => import('./MenuItem/MenuItem'), {ssr: false})
 
 const Menu = ({menuItems, style_menuItem}) => {
     const keys = getId()

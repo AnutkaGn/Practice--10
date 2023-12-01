@@ -9,8 +9,8 @@ const Logo = ({srcLogo}) => {
 
     return (
         <div>
-            <Link href={"http://localhost:3000"}>
-            <Image className='image' src={srcLogo}  width={40} height={40} alt='logo'/>
+            <Link href={"http://localhost:3000/"}>
+            <Image className='image' src={srcLogo} width={40} height={40} priority={true} alt='logo'/>
             </Link>
         </div>
     );
